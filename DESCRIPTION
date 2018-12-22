@@ -11,10 +11,8 @@ RoxygenNote: 6.1.1
 Imports: tidyr (>= 0.8.1), dplyr (>= 0.7.8), reshape2 (>= 1.4.3), data.table (>= 1.11.8)
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
-Authors@R: c(person("Furqan", "Awan", email = "furqanvet@gmail.com", role = "cre"),
-    person("Yongjie", "Liu", email = "liuyongjie@njau.com", role = "aut"))
+Authors@R: c(person("Furqan", "Awan", email = "furqanvet@gmail.com", role = "cre"), person("Yongjie", "Liu", email = "liuyongjie@njau.com", role = "aut"))
 NeedsCompilation: no
 Packaged: 2018-12-22 19:52:01 UTC; Dr.Furqan
-Author: Furqan Awan [cre],
-  Yongjie Liu [aut]
+Author: Furqan Awan [cre], Yongjie Liu [aut]
 Maintainer: Furqan Awan <furqanvet@gmail.com>
