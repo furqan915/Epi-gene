@@ -1,0 +1,116 @@
+---
+title: "Epi Gene - Package Vignette"
+author: "Furqan Awan and Yongjie Liu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Pan-genomic studies are trending these days as there is high number of genomes being sequenced. For this reason a pipeline/package was needed to compare the genomes in very short time. This package not only performs all the analyses in short time but also produces several options that could be utilized by user for further analyses. It requires two external binaries, meta-data file and fasta sequences. This package can only work in WINDOWS.
+
+
+## Metadata file
+
+Metdata file is a txt file that should contain all the information regarding the genomes. It must include following parts:
+
+- Rows should be the genomes
+- Column 1	ID e.g. org1
+- Column 2 	 relabel_ID e.g. org1|gene
+- Column 3 	 Strains
+- Column 4 	 Files e.g. file name including fasta extension
+
+
+--------------------------------------------------------
+     ID          relabel_ID      Strains        Files
+-------------- ------------- -------------- -------------
+     org1         org1|gene       anyseq1    anyseq1.fasta     
+
+     org2         org2|gene       anyseq2    anyseq2.fasta     
+
+     org3         org3|gene       anyseq3    anyseq3.fasta    
+---------------------------------------------------------
+
+
+## Prodigal
+
+Prodigal is the well known microbial ORF predicting software. This software can accurately predicts the microbial ORF sequences. Moreover this software takes very short time. This software should be installed in the working directory.
+
+## Usearch
+
+Usearch is the well known software for clustering, global and local alignment. This software is 1000 times faster than blast and it has more accuracy as compared to other aligning softwares. The bottleneck to use this software is to install this software in the same very directory in which you are working.
+
+
+## Steps:
+
+1)	Download or include all the genomes from NCBI or personal library
+
+2)	Prepare Meta-data file
+
+    Must prepare meta-data file as mentioned above.
+
+3)	Prodigal for ORF prediction
+- For amino acid sequences
+
+    predORFaa()
+
+5)	Relabeling the genes
+
+    relabel()
+
+6)	Combine all the genomes
+
+    joinfasta()
+
+7)	Sort all the combined sequences by length
+
+    sortbylength()
+
+8)	Cluster all the genomes
+- Generate Binary Pan-matrix
+
+    Clust_bin()
+i)	Enumerate the genes in the categories
+
+    Accessorygenes(),
+    Coregenes(),
+    Uniqgenes(),
+
+ii)	Calculate binary distances/average distance/UPGMA tree
+
+    distGen()
+iii)	Hierarchal clustering
+
+    Dendrogen()
+
+iv)	Heat map based on binary distances
+
+    Heatgen1()
+
+v)	Heat map based on presence/Absence of genes
+
+    Heatgen2()
+- Generate matrix based on sequence Identity
+
+    Clust_id()
+
+i)	PCA for further analyses
+
+9)	Extract representative sequences of Core, accessory and unique genes
+
+    Accessory_gen(), 
+    Core_gen(),
+    Uniq_gen(),
+
+10)	Functional Annotation (Database Sequence should be provided by user)
+
+    annotat()
