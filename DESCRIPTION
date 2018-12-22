@@ -1,8 +1,7 @@
 Package: EpiGene
 Title: EASY HANDLING OF GENOMES
 Version: 1.0
-Author@R: person("Furqan", "Awan", email = "furqanvet@gmail.com", role
-        = "aut")
+Author@R: person("Furqan", "Awan", email = "furqanvet@gmail.com", role = "aut")
 Description: Epi Gene can cluster the whole genomes into 3 categories of core, 
     accessory and unique genes. It can build two types of panmatrixes (i) 
     Binary Panmatrix based on absence and presence of genes. (ii) Panmatrix 
