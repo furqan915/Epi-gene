@@ -5,7 +5,7 @@ Epi Gene can cluster the whole genomes into 3 categories of core,
     based on the identity of the sequences. Binary pan-matrix will be used 
     to build a UPMGA tree and heatmap to further describe an evolutionary relationship. 
     While the pan-matrix based on sequence identity can be used for further
-    quantitative analyses.
+    quantitative analyses. This software can only work in WINDOWS operating systems.
     
                    Install from GitHub :  devtools::install_github("furqan915/Epi-Gene")
 For a step by step guide, you can go through the vignettes, case study and this read me file:
