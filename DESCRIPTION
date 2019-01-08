@@ -2,13 +2,7 @@ Package: EpiGene
 Title: EASY HANDLING OF GENOMES
 Version: 1.0
 Author@R: person("Furqan", "Awan", email = "furqanvet@gmail.com", role = "aut")
-Description: Epi Gene can cluster the whole genomes into 3 categories of core, 
-    accessory and unique genes. It can build two types of panmatrixes (i) 
-    Binary Panmatrix based on absence and presence of genes. (ii) Panmatrix 
-    based on the identity of the sequences. Binary pan-matrix will be used 
-    to build a UPMGA tree and heatmap to further describe an evolutionary relationship. 
-    While the pan-matrix based on sequence identity can be used for further
-    quantitative analyses.
+Description: Epi Gene can cluster the whole genomes into 3 categories of core, accessory and unique genes. It can build two types of panmatrixes (i) Binary Panmatrix based on absence and presence of genes. (ii) Panmatrix based on the identity of the sequences. Binary pan-matrix will be used to build a UPMGA tree and heatmap to further describe an evolutionary relationship. While the pan-matrix based on sequence identity can be used for further quantitative analyses.
 Depends: R (>= 3.0.0)
 License: GPL-3
 Encoding: UTF-8
